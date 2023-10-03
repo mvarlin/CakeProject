@@ -19,7 +19,13 @@
                 <?php
                     echo $this->Form->control('nom');
                     echo $this->Form->control('resume');
-                    echo $this->Form->control('lane');
+                    echo $this->Form->control('lane', [
+                        'options' => $championslane,
+                        'multiple' => 'multiple',
+                        'type' => 'select']
+                    );
+                    // echo $this->Form->control('group_id', ['options' => $laneData]);
+                    // echo $this->Form->control('field', ['type' => 'file']);
                     echo $this->Form->control('competences');
                     echo $this->Form->control('pp');
                     echo $this->Form->control('titre');

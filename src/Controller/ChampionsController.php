@@ -30,7 +30,7 @@ class ChampionsController extends AppController
             $champTab[$name]['Titre'] = $rs['titre'];
             $champTab[$name]['Resumé'] = $rs['resume'];
         }
-        $this->log($champTab);
+        // $this->log($champTab);
         $this->set(compact('champions'));
     }
 
@@ -56,6 +56,12 @@ class ChampionsController extends AppController
      */
     public function add()
     {
+        // $this->loadModel('Lane');
+        // $result = $this->Lane->find()          
+        //                           ->all()
+        //                           ->extract('lane_name');
+        // $this->log($result->lane_name);
+        $this->set('championslane', ['Top','Jungle','Mid',]);
         $champion = $this->Champions->newEmptyEntity();
         if ($this->request->is('post')) {
             $champion = $this->Champions->patchEntity($champion, $this->request->getData());
@@ -90,6 +96,8 @@ class ChampionsController extends AppController
             }
             $this->Flash->error(__('The champion could not be saved. Please, try again.'));
         }
+        
+        // $this->set('laneData', );
         $this->set(compact('champion'));
     }
 
