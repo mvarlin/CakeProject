@@ -61,7 +61,9 @@ class ChampionsController extends AppController
         //                           ->all()
         //                           ->extract('lane_name');
         // $this->log($result->lane_name);
-        $this->set('championslane', ['Top','Jungle','Mid',]);
+        $this->set('championsLane', ['Top','Jungle','Mid','Adc','Support']);
+        $this->set('championsCompetences', ['a','z','e','r']);
+        $this->set('championsDifficult', ['Faible','Modérée','Elevée']);
         $champion = $this->Champions->newEmptyEntity();
         if ($this->request->is('post')) {
             $champion = $this->Champions->patchEntity($champion, $this->request->getData());
@@ -84,6 +86,9 @@ class ChampionsController extends AppController
      */
     public function edit($id = null)
     {
+        $this->set('championsLane', ['Top','Jungle','Mid','Adc','Support']);
+        $this->set('championsCompetences', ['a','z','e','r']);
+        $this->set('championsDifficult', ['Faible','Modérée','Elevée']);
         $champion = $this->Champions->get($id, [
             'contain' => [],
         ]);
