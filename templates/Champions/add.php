@@ -18,23 +18,26 @@
                 <legend><?= __('Add Champion') ?></legend>
                 <?php
                     echo $this->Form->control('nom');
-                    echo $this->Form->input('resume', [
+                    echo $this->Form->control('resume', [
                         'type' => 'textarea',
                         'rows' => '1',
                         'cols' => '10',
                         'escape' => false
                     ]);
                     echo $this->Form->control('lane', [
-                        'options' => $championslane,
-                        'multiple' => true,
+                        'options' => $championsLane,
                         'type' => 'select']
                     );
-                    // echo $this->Form->control('group_id', ['options' => $laneData]);
-                    // echo $this->Form->control('field', ['type' => 'file']);
-                    echo $this->Form->control('competences');
+                    echo $this->Form->control('competences',[
+                        'options' => $championsCompetences,
+                        'type' => 'select'
+                    ]);
                     echo $this->Form->control('pp');
                     echo $this->Form->control('titre');
-                    echo $this->Form->control('difficult');
+                    echo $this->Form->control('difficult',[
+                        'options' => $championsDifficult,
+                        'type' => 'select'
+                    ]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
