@@ -18,10 +18,15 @@
                 <legend><?= __('Add Champion') ?></legend>
                 <?php
                     echo $this->Form->control('nom');
-                    echo $this->Form->control('resume');
+                    echo $this->Form->input('resume', [
+                        'type' => 'textarea',
+                        'rows' => '1',
+                        'cols' => '10',
+                        'escape' => false
+                    ]);
                     echo $this->Form->control('lane', [
                         'options' => $championslane,
-                        'multiple' => 'multiple',
+                        'multiple' => true,
                         'type' => 'select']
                     );
                     // echo $this->Form->control('group_id', ['options' => $laneData]);

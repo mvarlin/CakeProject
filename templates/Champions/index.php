@@ -16,7 +16,7 @@
                     <!-- <th><?= $this->Paginator->sort('resume') ?></th> -->
                     <!-- <th><?= $this->Paginator->sort('lane') ?></th> -->
                     <!-- <th><?= $this->Paginator->sort('competences') ?></th> -->
-                    <th><?= $this->Paginator->sort('picture') ?></th>
+                    <!-- <th><?= $this->Paginator->sort('picture') ?></th> -->
                     <th><?= $this->Paginator->sort('titre') ?></th>
                     <!-- <th><?= $this->Paginator->sort('difficult') ?></th> -->
                     <th class="actions"><?= __('Actions') ?></th>
@@ -30,7 +30,7 @@
                     <!-- <td><?= h($champion->resume) ?></td> -->
                     <!-- <td><?= h($champion->lane) ?></td> -->
                     <!-- <td><?= h($champion->competences) ?></td> -->
-                    <td><?= h($champion->pp) ?></td>
+                    <!-- <td><?= h($champion->pp) ?></td> -->
                     <td><?= h($champion->titre) ?></td>
                     <!-- <td><?= h($champion->difficult) ?></td> -->
                     <td class="actions">
